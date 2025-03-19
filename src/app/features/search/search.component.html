@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <!-- Título arriba -->
+  <div class="title">
+    <h1>Se muestra resultados para "{{ searchQuery }}":</h1>
+  </div>
+
+  <!-- Loader mientras se cargan los juegos -->
+  <div class="loader" *ngIf="isLoading">
+    <app-loader></app-loader>
+  </div>
+
+  <!-- Contenedor de juegos -->
+  <div class="game-container" *ngIf="!isLoading">
+    <div *ngFor="let game of searchResults" class="game-card">
+      <img [src]="game.backgroundImage" alt="{{ game.name }}" *ngIf="game.backgroundImage">
+      <h3 class="game-title">{{ game.name }}</h3>
+      <a [routerLink]="['/games', game.id]">Ver Detalles</a>
+    </div>
+
+    <!-- Componente de "No resultados" -->
+    <app-no-result *ngIf="!isLoading && noResults"></app-no-result>
+  </div>
+</div>
+
+
+  
+
+
+
+  
+
+  

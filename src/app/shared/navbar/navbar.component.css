@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+nav ul {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center; /* Asegura que todo esté alineado verticalmente */
+  gap: 20px; /* Espaciado uniforme */
+  list-style: none;
+}
+
+
+nav ul li a  {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+  
+nav ul li a:hover {
+  background: #555;
+  cursor: pointer;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.search-input {
+  padding: 15px;  /* Aumenta el padding para que sea más grande */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borde semi-transparente */
+  border-radius: 20px; /* Bordes redondeados */
+  outline: none;
+  font-size: 16px; /* Letra más grande */
+  width: 200px; /* Ancho predeterminado */
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  color: white; /* Texto en color blanco */
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder más visible */
+}
+
+.search-btn, .close-btn {
+  font-family: "Roboto", sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px; /* Tamaño del icono más grande */
+  color: white; /* Iconos en color blanco */
+}
+
+.close-btn {
+  color: rgb(255, 100, 100); /* Botón de cerrar en color rojo */
+}
+
+.search-input:focus {
+  width: 250px; /* Se expande al hacer clic */
+  background: rgba(255, 255, 255, 0.3); /* Aumenta la opacidad al escribir */
+}
+
+
+
+
+
+
+  

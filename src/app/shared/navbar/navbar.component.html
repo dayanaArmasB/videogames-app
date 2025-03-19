@@ -1,0 +1,20 @@
+<nav>
+  <ul>
+    <li><a [routerLink]="'/inicio'" routerLinkActive="active">Inicio</a></li>
+    <li><a [routerLink]="'/juegos'" routerLinkActive="active">Juegos</a></li>
+    <li>
+      <div class="search-container">
+        <input 
+          *ngIf="mostrarBuscador"
+          type="text" 
+          [(ngModel)]="searchQuery" 
+          placeholder="Buscar..."
+          (keyup.enter)="buscarJuego()"
+          class="search-input"
+        />
+        <button *ngIf="mostrarBuscador" (click)="toggleBuscador()" class="close-btn">✖</button>
+        <button *ngIf="!mostrarBuscador" (click)="toggleBuscador()" class="search-btn">Buscar 🔍</button>
+      </div>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,43 @@
+<div class="home-container">
+    <!-- Banner con imagen llamativa -->
+    <section class="banner">
+        <div class="banner-text">
+          <h1>Descubre los mejores videojuegos</h1>
+          <h1>En un solo lugar!</h1>
+        </div>
+        <img src="assets/images/banner4.png" alt="Neón de videojuegos" class="banner-image">
+    </section>
+      
+      <!-- Mensaje de bienvenida -->
+      <section class="welcome-section">
+        <div class="welcome-header">
+          <h1>Bienvenido a VideoGamesApp!</h1>
+        </div>
+        <div class="welcome-content">
+          <p>
+            Aquí explorarás un mundo lleno de aventuras, acción y estrategias con nuestra selección de los mejores videojuegos.
+            Encuentra información detallada, valoraciones y mucho más.
+          </p>
+        </div>
+      </section>
+  
+    <!-- Botón para explorar juegos -->
+    <section class="catalogo">
+      <div class="catalogo-header">
+          <h2>Descubre nuestro catálogo</h2>
+          <a  [routerLink]="'/juegos'" routerLinkActive="active" class="ver-todo">Ver todo</a>
+      </div>
+      <div class="categorias">
+          <div [routerLink]="['/juegos', 'adventure']" class="categoria">
+              <p>Juegos de aventura</p>
+          </div>
+          <div [routerLink]="['/juegos', 'action']" class="categoria">
+              <p>Juegos de acción</p>
+          </div>
+          <div [routerLink]="['/juegos', 'puzzle']" class="categoria">
+              <p>Juegos de estrategia</p>
+          </div>
+      </div>
+  </section>
+  </div>
+  

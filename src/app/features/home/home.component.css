@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+20&family=Jersey+25&display=swap');
+
+.home-container{
+  min-height: 100vh;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Negro con transparencia */
+  padding: 90px 10px 60px;
+  width: 100vw;
+  height: 50vh;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  backdrop-filter: blur(5px); /* Añade un efecto de desenfoque detrás */
+}
+
+  .banner-text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 55px; /* Tamaño del texto más equilibrado */
+    color: aliceblue;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 2);
+    max-width: 40%;
+  }
+  
+  .banner-image {
+    width: 80%; /* Imagen más grande y adaptable */
+    height: auto;
+    filter: drop-shadow(0 0 15px #ff0);
+    transform: translateY(-70px);
+
+  }
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 60px 30px;
+  }
+  
+  .welcome-header {
+    background: rgba(7, 7, 7, 0.6); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .welcome-header h1 {
+    font-family: "Jersey 25", sans-serif;
+    font-size: 66px;
+    font-weight: bold;
+    color: #f7f3f3c0;
+  }
+  
+  .welcome-content {
+    background: rgba(7, 7, 7, 0.6); /* Fondo semitransparente */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .welcome-content p {
+    font-family: "Jersey 20", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+
+  /* Sección completa */
+.catalogo{
+  padding: 30px 60px 60px;
+}
+/* Encabezado de la sección */
+.catalogo-header {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.catalogo-header h2 {
+  color: white;
+  font-family: "Jersey 25", sans-serif;
+  font-size: 60px;
+}
+
+.ver-todo {
+  font-family: "Jersey 20", sans-serif;
+  font-size: 25px;
+  background: black;
+  color: white;
+  padding: 20px 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Contenedor de las categorías */
+.categorias {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Tarjetas de cada categoría */
+.categoria {
+  font-family: "Jersey 20", sans-serif;
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+
+/* Efecto al pasar el mouse */
+.categoria:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+  
+  /* 📱 Estilos Responsivos */
+  @media (max-width: 768px) {
+    .banner {
+      flex-direction: row; /* Apila los elementos en pantallas pequeñas */
+      text-align: center;
+      height: auto;
+      width: 78vw;
+    }
+  
+    .banner-text {
+      font-size: 0.8rem;
+      max-width: 80%;
+    }
+  
+    .banner-image {
+      width: 50%;
+    }
+  }
+  
+  
+  

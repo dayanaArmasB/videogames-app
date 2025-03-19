@@ -1,0 +1,22 @@
+.no-results {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Previene desbordamiento */
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

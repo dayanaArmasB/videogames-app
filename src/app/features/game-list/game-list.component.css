@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+
+.game-list {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Se ajusta a 3 columnas */
+  grid-auto-rows: auto; /* Altura automática */
+  gap: 30px; /* Espaciado entre tarjetas */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.game-card {
+  background: #2c2c2c;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+  text-align: center;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+
+.game-card:hover {
+  transform: scale(1.1); /* Aumenta el tamaño un 10% */
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.game-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.game-card a {
+  color: #9b59b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.game-card a:hover {
+  text-decoration: underline;
+}
+.title{
+  color: white;
+  font-size: 25px;
+  font-family: "Jersey 25", sans-serif;
+}
+
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* Hace que ocupe todo el espacio disponible */
+  width: 100%;
+}
+
+
+
+

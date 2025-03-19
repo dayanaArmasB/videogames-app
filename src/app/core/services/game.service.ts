@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { Game } from '../models/game.model';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameService {
-  private backendUrl = 'http://localhost:8080/api'; // URL de tu backend en Spring Boot
+  private backendUrl = environment.backendUrl; // ✅ Usar la variable de environment
 
   constructor(private http: HttpClient) {}
 

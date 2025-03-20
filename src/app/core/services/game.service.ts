@@ -13,9 +13,10 @@ export class GameService {
   constructor(private http: HttpClient) {}
 
   // Obtener todos los juegos desde el backend
-  getGames(): Observable<any> {
-    return this.http.get(`${this.backendUrl}/games`);
+  getGames(page: number = 1): Observable<any> {
+    return this.http.get(`${this.backendUrl}/games?page=${page}`);
   }
+  
 
   // Buscar juegos desde el backend
   searchGames(query: string): Observable<Game[]> {

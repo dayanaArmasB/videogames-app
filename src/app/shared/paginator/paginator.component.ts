@@ -12,7 +12,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 export class PaginatorComponent {
   @Input() totalItems!: number;  // Total de juegos disponibles
   @Input() pageSize: number = 30; // Cantidad de juegos por página
-  @Input() pageSizeOptions: number[] = [10, 30, 50]; // Opciones de tamaño de página
   @Output() pageChanged = new EventEmitter<number>(); // Evento para informar al padre
 
   changePage(event: any) {

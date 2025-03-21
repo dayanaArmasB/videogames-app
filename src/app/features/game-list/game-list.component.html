@@ -1,20 +1,29 @@
-  <div class="game-list">
-    <div class="title">
-      <h1>Lista de Juegos</h1>
-    </div>
+<div class="game-list">
+  <div class="title">
+    <h1>Lista de Juegos</h1>
+  </div>
 
-    <div class="loader" *ngIf="isLoading">
-      <app-loader></app-loader>
-    </div>
+  <div class="loader" *ngIf="isLoading">
+    <app-loader></app-loader>
+  </div>
 
-    <div class="games" *ngIf="!isLoading">
-      <div *ngFor="let game of games" class="game-card">
-        <img [src]="game.background_image" alt="{{ game.name }}">
-        <h3>{{ game.name }}</h3>
-        <a [routerLink]="['/games', game.id]">Ver Detalles</a>
-      </div>
+  <div class="games" *ngIf="!isLoading">
+    <div *ngFor="let game of games" class="game-card">
+      <img [src]="game.background_image" alt="{{ game.name }}">
+      <h3>{{ game.name }}</h3>
+      <a [routerLink]="['/games', game.id]">Ver Detalles</a>
     </div>
   </div>
+
+  <!-- Paginador -->
+  <app-paginator
+    *ngIf="totalGames > pageSize"
+    [totalItems]="totalGames"
+    [pageSize]="pageSize"
+    (pageChanged)="onPageChange($event)">
+  </app-paginator>
+</div>
+
 
 
 

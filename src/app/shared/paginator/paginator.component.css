@@ -1,2 +1,6 @@
 
-  
+mat-paginator{
+  background: rgba(255, 255, 255, 0); /* Fondo oscuro semi-transparente */
+  color: white;
+  font-size: 15px;
+}

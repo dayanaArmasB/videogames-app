@@ -1,13 +1,15 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './features/home/home.component';
+import { GameListComponent } from './features/game-list/game-list.component';
 
 export const routes: Routes = [
     {
         path: 'inicio',
-        loadComponent: () => import('./features/home/home.component').then(m => m.HomeComponent)
+        component: HomeComponent
     },
     {
         path: 'juegos',
-        loadComponent: () => import('./features/game-list/game-list.component').then(m => m.GameListComponent)
+        component: GameListComponent
     },
     {
         path: 'juegos/:categoria', // 👉 Nueva ruta para filtrar juegos por categoría

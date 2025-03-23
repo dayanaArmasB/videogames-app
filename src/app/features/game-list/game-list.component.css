@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
 
 
 .game-list {
@@ -18,13 +17,13 @@
   gap: 30px; /* Espaciado entre tarjetas */
   max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .game-card {
   background: #2c2c2c;
   color: white;
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.2s ease;
@@ -34,20 +33,21 @@
 }
 
 .game-card:hover {
-  transform: scale(1.1); /* Aumenta el tamaño un 10% */
+  transform: scale(1.05); /* Aumenta el tamaño un 10% */
 }
 
 .game-card img {
   width: 100%;
-  height: auto;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.game-card h3 {
-  font-size: 1.2rem;
+.game-title {
+  font-size: 16px;
   font-weight: bold;
-  margin: 10px 0;
+  color: white;
+  margin-top: 8px;
 }
 
 .game-card a {

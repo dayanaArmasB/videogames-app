@@ -1,6 +1,23 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 mat-paginator{
   background: rgba(255, 255, 255, 0); /* Fondo oscuro semi-transparente */
   color: white;
-  font-size: 15px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+.mat-paginator-navigation-previous,
+.mat-paginator-navigation-next {
+  color: white !important; /* Cambia el color de las flechas */
+  font-size: 20px; /* Ajusta el tamaño si lo deseas */
+}
+
+::ng-deep .mat-mdc-paginator-navigation-next svg,
+::ng-deep .mat-mdc-paginator-navigation-previous svg {
+  fill: white !important; /* Cambia el color de las flechas */
+  width: 30px; /* Ajusta el tamaño de las flechas */
+  height: 30px;
+}
+::ng-deep mat-paginator {
+  display: flex;
+  justify-content: center;
 }

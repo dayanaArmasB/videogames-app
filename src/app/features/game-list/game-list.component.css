@@ -76,6 +76,12 @@
 
 
 
-
+.paginator-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente si es necesario */
+  width: 100%; /* O ajusta según sea necesario */
+  margin-top: 20px; /* Espacio opcional arriba */
+}
 
 

@@ -16,12 +16,14 @@
   </div>
 
   <!-- Paginador -->
-  <app-paginator
-    *ngIf="totalGames > pageSize"
-    [totalItems]="totalGames"
-    [pageSize]="pageSize"
-    (pageChanged)="onPageChange($event)">
-  </app-paginator>
+  <div class="paginator-container">
+    <app-paginator
+      *ngIf="totalGames > pageSize"
+      [totalItems]="totalGames"
+      [pageSize]="pageSize"
+      (pageChanged)="onPageChange($event)">
+    </app-paginator>
+  </div>
 </div>
 
 

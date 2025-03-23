@@ -25,7 +25,7 @@ export class GameService {
 
   // Buscar juegos desde el backend
   searchGames(query: string): Observable<Game[]> {
-    const url = `${base_url}/api/search?query=${encodeURIComponent(query)}`;
+    const url = `${base_url}/search?query=${encodeURIComponent(query)}`;
     return this.http.get<Game[]>(url);
   }
   

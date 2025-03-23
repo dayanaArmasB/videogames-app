@@ -8,13 +8,18 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root'
 })
 export class GameService {
-  private backendUrl = environment.backendUrl; // ✅ Usar la variable de environment
+  private readonly backendUrl = environment.backendUrl;  
 
-  constructor(private http: HttpClient) {}
-
-  // Obtener todos los juegos desde el backend
-  getGames(page: number): Observable<any> {
-    return this.http.get(`${this.backendUrl}/games?page=${page}`);
+  constructor(private readonly http: HttpClient) {}
+ 
+  getGames(page: number, genres?: string): Observable<any> {
+    let url = `${this.backendUrl}/games?page=${page}`;
+    
+    if (genres) {
+      url += `&genres=${genres}`;
+    }
+  
+    return this.http.get(url);
   }
   
 

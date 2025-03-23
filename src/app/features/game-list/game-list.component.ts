@@ -20,7 +20,8 @@ export class GameListComponent{
   pageSize: number = 30; // Juegos por página
   currentPage: number = 1; // Página actual
 
-  constructor(private gameService: GameService, private route: ActivatedRoute) {}
+  constructor(private readonly gameService: GameService, 
+              private readonly route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -31,7 +32,7 @@ export class GameListComponent{
 
   loadGames(page: number) {
     this.isLoading = true;
-    this.gameService.getGames(page).subscribe(
+    this.gameService.getGames(page,this.categoria).subscribe(
       (data) => {
         this.games = data.results; // Obtiene los juegos de la API
         this.totalGames = data.count; // RAWG.io devuelve el total de juegos

@@ -21,8 +21,8 @@ export class SearchComponent {
   searchQuery: string = '';
 
   constructor(
-    private route: ActivatedRoute,
-    private gameService: GameService
+    private readonly route: ActivatedRoute,
+    private readonly gameService: GameService
   ) {}
 
   ngOnInit(): void {

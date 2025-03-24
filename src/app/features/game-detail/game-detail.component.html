@@ -10,7 +10,7 @@
 
   <!-- ✅ Solo muestra los detalles si isLoading es false y game tiene datos -->
   <div class="game-card" *ngIf="!isLoading && game">
-    <img *ngIf="game.background_image" [src]="game.background_image" [alt]="game.name" class="game-image">
+    <img *ngIf="game.background_image" [src]="game.background_image" alt="game.name" class="game-image">
 
     <div class="game-info">
       <h1 class="game-title">{{ game.name }}</h1>

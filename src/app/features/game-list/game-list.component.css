@@ -82,6 +82,9 @@
 
 /* 📱 Celulares pequeños (Menos de 767px) */
 @media screen and (max-width: 767px) {
+  .title{
+    font-size: 20px;
+  }
   .games {
     grid-template-columns: repeat(2, minmax(140px, 1fr)); /* 2 columnas */
     gap: 15px; /* Menos espacio entre tarjetas */
@@ -99,6 +102,9 @@
 
 /* 📱 Tabletas (768px - 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .title{
+    font-size: 22px;
+  }
   .games {
     grid-template-columns: repeat(3, minmax(180px, 1fr)); /* 3 columnas */
     gap: 20px;

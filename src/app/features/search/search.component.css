@@ -80,6 +80,51 @@
   width: 100%;
 }
 
+/* 📱 Celulares pequeños (Menos de 767px) */
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 20px; /* Reducimos el tamaño del título */
+    text-align: center; /* Centramos el título */
+    padding: 0;
+  }
+
+  .game-container {
+    grid-template-columns: repeat(2, minmax(140px, 1fr)); /* 2 columnas */
+    gap: 15px; /* Reducimos el espacio */
+    max-width: 90%;
+  }
+
+  .game-card img {
+    height: 150px; /* Ajustamos la imagen */
+  }
+
+  .game-title {
+    font-size: 14px; /* Texto más pequeño */
+  }
+}
+
+/* 📱 Tabletas (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 22px;
+    text-align:center;
+    padding: 0;
+  }
+
+  .game-container {
+    grid-template-columns: repeat(3, minmax(180px, 1fr)); /* 3 columnas */
+    gap: 20px;
+    max-width: 95%;
+  }
+
+  .game-card img {
+    height: 160px;
+  }
+
+  .game-title {
+    font-size: 16px;
+  }
+}
 
 
 

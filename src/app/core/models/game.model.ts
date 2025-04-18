@@ -6,6 +6,7 @@
     released: string;
     background_image: string; // ✅ Agregamos esta propiedad
     platforms: { platform: { name: string } }[];  // ← Corrección aquí
+    rating : number;
     website?: string;
   }
   

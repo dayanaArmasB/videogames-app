@@ -14,6 +14,7 @@ export class NavbarComponent {
 
   searchQuery: string = '';
   mostrarBuscador = false;
+  sidebarOpen = false;  // Nueva propiedad para controlar visibilidad del sidebar
 
   constructor(private router: Router) {}
 
@@ -25,6 +26,20 @@ export class NavbarComponent {
   buscarJuego() {
     if (this.searchQuery.trim()) {
       this.router.navigate(['/buscar'], { queryParams: { q: this.searchQuery } });
+      this.closeSidebar(); // Cierra el sidebar al realizar búsqueda (solo afecta en móviles)
     }
   }
+  // Nuevos métodos para control del sidebar
+  toggleSidebar(): void {
+    this.sidebarOpen = !this.sidebarOpen;
+  }
+
+  closeSidebar(): void {
+    this.sidebarOpen = false;
+  }
+
+
+
 }
+
+

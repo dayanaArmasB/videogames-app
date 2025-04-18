@@ -1,4 +1,10 @@
-<nav>
+<!-- Botón de hamburguesa (sólo visible en móviles) -->
+<div class="hamburger-menu" (click)="toggleSidebar()">
+  ☰
+</div>
+
+<!-- Sidebar/Nav -->
+<nav [class.active]="sidebarOpen">
   <ul>
     <li><a [routerLink]="'/inicio'" routerLinkActive="active">Inicio</a></li>
     <li><a [routerLink]="'/juegos'" routerLinkActive="active">Juegos</a></li>
@@ -18,3 +24,5 @@
     </li>
   </ul>
 </nav>
+
+

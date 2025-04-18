@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { GameService } from '../../core/services/game.service';
 import { CommonModule } from '@angular/common';
@@ -39,7 +39,8 @@ export class GameDetailComponent {
                 released: data.released,
                 background_image: data.background_image || '',
                 genres: data.genres || [],
-                platforms: data.platforms || []
+                platforms: data.platforms || [],
+                rating: data.rating
               };
 
               // Procesar géneros

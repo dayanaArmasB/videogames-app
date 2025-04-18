@@ -1,0 +1,65 @@
+@import 'swiper/css';
+    @import 'swiper/css/navigation';
+    @import 'swiper/css/pagination';
+    
+    .swiper {
+      width: 85%;
+      height: 400px; /* Ajusta esta altura según necesites */
+    }
+    .swiper-slide {
+     font-family: "Jersey 20", sans-serif;
+     font-weight: bold;
+     font-size: clamp(30px, 3vw, 40px);
+     background: rgba(0, 0, 0, 0.6);
+     color: white;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 30px;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: 0.3s ease; /* Aplica la misma transición a todos los cambios */
+     overflow-wrap: break-word; /* Alternativa más moderna para word-break */
+    }
+    .swiper-slide:nth-child(odd) {
+        background: rgba(0, 0, 0, 0.6);
+    }
+    /* Efecto al pasar el mouse */
+    .swiper-slide:hover {
+    transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.8);
+    }
+    @media screen and (max-width: 767px) {
+
+        .swiper {
+            width: 100%;
+            height: 180px; /* Ajusta esta altura según necesites */
+        }
+
+        .swiper-slide {
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+           }
+
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .swiper {
+            width: 100%;
+            height: 300px; /* Ajusta esta altura según necesites */
+        }
+
+        .swiper-slide {
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+           }
+    }

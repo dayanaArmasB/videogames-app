@@ -1,33 +1,15 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Navigation, Pagination } from 'swiper/modules';
 import Swiper from 'swiper';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-carrousel',
   standalone: true,
+  imports: [RouterModule,CommonModule],
   templateUrl: './carrousel.component.html',
-  styles: [`
-    @import 'swiper/css';
-    @import 'swiper/css/navigation';
-    @import 'swiper/css/pagination';
-    
-    .swiper {
-      width: 100%;
-      height: 300px; /* Ajusta esta altura según necesites */
-    }
-    .swiper-slide {
-      text-align: center;
-      background: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .swiper-slide:nth-child(odd) {
-      background: #e0e0e0;
-    }
-  `]
+  styleUrl: './carrousel.component.css'
 })
 export class CarrouselComponent implements AfterViewInit {
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;

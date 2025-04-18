@@ -20,27 +20,16 @@
           </p>
         </div>
       </section>
-      <app-carrousel>
-        
-      </app-carrousel>
+
     <!-- Botón para explorar juegos -->
     <section class="catalogo">
       <div class="catalogo-header">
           <h2>Descubre nuestras categorias</h2>
           <a  [routerLink]="'/juegos'" routerLinkActive="active" class="ver-todo">Ver todo</a>
       </div>
-      <div class="categorias">
-        <div [routerLink]="['/juegos', 'adventure']" class="categoria">
-          <p>Juegos de aventura</p>
-      </div>
-      <div [routerLink]="['/juegos', 'action']" class="categoria">
-          <p>Juegos de acción</p>
-      </div>
-      <div [routerLink]="['/juegos', 'puzzle']" class="categoria">
-          <p>Juegos de estrategia</p>
-      </div>
-      
-      </div>
-  </section>
+      <app-carrousel>
+        
+      </app-carrousel>
+    </section>
   </div>
   
